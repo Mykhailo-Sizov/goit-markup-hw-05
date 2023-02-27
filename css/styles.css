@@ -223,7 +223,7 @@ ul {
     border-radius: 4px;
 }
 
-.backdrop .is-hidden {
+.backdrop.is-hidden {
    opacity: 0;
    visibility: hidden;
    pointer-events: none; 
@@ -253,7 +253,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    widows: 24px;
+    width: 24px;
     height: 24px;
     border-radius: 50%;
     background: #E7E9FC;
@@ -263,8 +263,6 @@ ul {
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-
 }
 
 /* первая секция после героя */
