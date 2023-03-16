@@ -634,17 +634,26 @@ img{
 }
 
 /* секция фото */
-.portfolio-foto {
-    margin-top: 72px;
-}
+
 
 .foto-list {
     display: flex;
+    margin-top: 72px;
     flex-wrap: wrap;
-    width: 1158px;
-    border: 0.5px solid #F4F4FD;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);     
+    width: 1158px;      
 }
+
+.portfolio-foto {
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+.foto-list-img :hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    border: 0.5px solid #F4F4FD;
+}
+
 
 .overlay {
     position: relative;
@@ -695,7 +704,7 @@ img{
     width: 360px;
     margin-right: 24px;
     margin-bottom: 48px;
-    cursor: pointer;
+    
 }
 
 .foto-img-list:nth-child(3n) { 
