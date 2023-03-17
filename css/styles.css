@@ -637,22 +637,35 @@ img{
 
 
 .foto-list {
+    list-style: none;
     display: flex;
+    column-gap: 24px;
+    flex-wrap:wrap;
+    row-gap: 48px;
+    padding-left: 0px;
     margin-top: 72px;
-    flex-wrap: wrap;
-    width: 1158px;      
+    text-decoration: none;
+}
+
+.foto-img-list {
+    flex-basis: calc((100% - 3 * 24px) / 3 );
+    border: 1px solid #E7E9FC;;
 }
 
 .portfolio-foto {
+    list-style: none;
     text-decoration: none;
     cursor: pointer;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 }
-
-.foto-list-img :hover {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-    border: 0.5px solid #F4F4FD;
+.portfolio-foto :hover,
+.portfolio-foto :focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+
 
 
 .overlay {
@@ -673,7 +686,7 @@ img{
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.foto-img-list:hover .overlay::after {
+.portfolio-foto:hover .overlay::after {
     transform: translateY(0);
 }
 
@@ -694,18 +707,13 @@ img{
     opacity: 0;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.foto-img-list:hover .overlay-text{
+.portfolio-foto:hover .overlay-text{
     opacity: 1;
 }
 
 
 
-.foto-img-list {
-    width: 360px;
-    margin-right: 24px;
-    margin-bottom: 48px;
-    
-}
+
 
 .foto-img-list:nth-child(3n) { 
     margin-right: 0;
