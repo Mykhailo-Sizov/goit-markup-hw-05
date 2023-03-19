@@ -120,7 +120,7 @@ ul {
     border-radius: 2px;
     content: '';
     background-color: var(--button-color);
-    bottom: 0;
+    bottom: -1px;
     opacity: 0;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -205,18 +205,18 @@ ul {
 }
 
 .container {
-    max-width: 1152px;
+    max-width: 1158px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
 .first-title {
-    max-width: 492px;
+    max-width: 498px;
     margin: 0 auto;
     margin-bottom: 48px;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 56px;
-    line-height: 1em;
+    line-height: 1.2;
     letter-spacing: 0.02em;
 }
 
@@ -285,9 +285,8 @@ ul {
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
     cursor: pointer;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover,
@@ -299,10 +298,7 @@ ul {
 .modal-close-btn:hover .modal-close-icon,
 .modal-close-btn:focus .modal-close-icon{
     fill: #F4F4FD;
-    background-color: #404BBF;
 }
-
-
 
 
 /* первая секция после героя */
@@ -486,11 +482,11 @@ img{
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-item :hover, 
-.icon-item :focus {
+.icon:hover,
+.icon:focus {
     background-color: #404BBF;
-    
 }
+
    
 /* Customers  */
 
@@ -608,10 +604,11 @@ img{
     margin-right: 16px;
 }
 
-.footer-list :hover {
+/* .footer-list:hover {
     background-color: #31D0AA;
-}
+} */
 
+.icon-footer:hover,
 .icon-footer:focus {
     background-color: #31D0AA;
 }
@@ -656,7 +653,7 @@ img{
     border: 1px solid #E7E9FC;
     border-radius: 4px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-     color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
@@ -664,7 +661,7 @@ img{
 .button-btn:focus{
     background-color: var(--button-color);
     color: var(--white-color);
-    border: 1px solid var(--button-color);
+    border-color: var(--button-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     
     
@@ -690,7 +687,6 @@ img{
 .portfolio-foto {
     display: inline-block;
     text-decoration: none;
-    cursor: pointer;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
     
@@ -716,7 +712,7 @@ img{
     background-color: #4D5AE5;;
     top: 0;
     left: 0;
-    display: inline-block;
+    display: block;
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
